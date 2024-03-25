@@ -1,0 +1,101 @@
+.footer-ablove {
+  padding: 30px;
+  background-color: #5cb400;
+  color: #fff;
+  font-size: 1.5rem;
+
+  .btn {
+    float: right;
+    background-color: #fff;
+    font-family: "mouse-500", Arial, Helvetica, sans-serif;
+  }
+}
+
+footer {
+  padding: 80px 50px;
+  background-color: #222;
+  color: #fff;
+
+  @media screen and (max-width: 940px) {
+    padding: 50px 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .about p {
+    font-size: .9em;
+    margin-bottom: 20px;
+  }
+
+  .about .foot-address {
+    display: flex;
+
+    .icon {
+      padding: 20px 10px;
+    }
+
+    .addet {
+      font-size: .9rem;
+      margin: auto 0px;
+    }
+  }
+
+  .fotblog .blohjb {
+    margin-bottom: 10px;
+
+    p, span {
+      font-size: .9rem;
+    }
+  }
+
+  .glink ul li {
+    padding: 10px;
+
+    i {
+      margin-right: 10px;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .tags ul li {
+    float: left;
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+  }
+}
+
+.copy {
+  padding: 20px;
+  background-color: #191616;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  span {
+    float: right;
+
+    i {
+      margin-right: 20px;
+    }
+  }
+}
+
+.cop-ck {
+  padding: 20px;
+  background-color: #ffffffbd;
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}
