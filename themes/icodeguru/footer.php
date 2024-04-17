@@ -8,7 +8,7 @@
            <div class="col-md-2"></div>
             <div class="col-md-4">
                 <h5>Contact Us</h5>
-                <p>Email: <?php echo get_theme_mod('footer_email', 'info@icode.guru'); ?><br>Location: <?php echo get_theme_mod('footer_phone', 'Silicon Valley, United States of America'); ?></p>
+                <p>Email: <?php echo get_theme_mod('footer_email', 'info@icode.guru'); ?><br>Location: <?php echo get_theme_mod('footer_phone', 'S. Bay Area, CA, USA'); ?></p>
             </div>
         </div>
     </div>

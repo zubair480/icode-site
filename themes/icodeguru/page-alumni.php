@@ -1,21 +1,12 @@
 <?php get_header(); ?>
 
-<div class="page-nav no-margin row">
-        <div class="container">
-            <div class="row">
-                <h2>Alumni</h2>
-                <ul>
-                    <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
-                    <li><i class="fas fa-angle-double-right"></i>Alumni</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
     <!-- Alumni start -->
-    <div class="our-services container-fluid">
+    <div class="our-services container-fluid mt-2">
     <div class="container">
         <div class="row session-title">
             <h2>iCodeGuru Alumni</h2>
+            <p>iCodeGuru works at scale and have a lot of students. We don't keep track of all our students but here are some of our notable alumni</p>
         </div>
         <div class="service-row row justify-content-center align-items-center">
             <!-- Card 1 -->
@@ -87,6 +78,18 @@
                         <h4>Iqbal Khatoon</h4>
                         <a class="fab fa-linkedin"></a>
                         <a href="https://www.linkedin.com/in/iqbalkhatoon/" target="_blank" class="linkedin-link"> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-3">
+                <div class="service-col" style="height:360px;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rehmana.jpeg" alt="">
+                    <div class="service-detail">
+
+                        <h4>Rehmana Younis</h4>
+                        <a class="fab fa-linkedin"></a>
+                        <a href="https://www.linkedin.com/in/rehmana-younis/" target="_blank" class="linkedin-link"> LinkedIn</a>
                     </div>
                 </div>
             </div>

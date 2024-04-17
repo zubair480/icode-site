@@ -92,7 +92,7 @@ body {
   overflow-x: hidden; }
 
 .session-title {
-  padding: 30px;
+  padding: 0px;
   margin: 0px; }
   .session-title h2 {
     width: 100%;
@@ -492,6 +492,11 @@ header {
     border: 1px solid #cccccc94;
     margin-bottom: 30px;
   height: 400px; }
+  @media (max-width: 768px) {
+     .our-services .service-col {
+        margin-bottom: 20px;
+      height: 800px; }
+  }
     .our-services .service-col .service-detail {
       text-align: center;
       padding: 20px;

@@ -4,29 +4,13 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700', array(), null );
     wp_enqueue_style( 'google-font-2', 'https://fonts.googleapis.com/css?family=montserrat:300,400,600,700', array(), null );
 
-    // Bootstrap
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.5.0' );
-    wp_enqueue_style( 'main-scss', get_template_directory_uri() . '/build/index.js', array(), '4.5.0' );
+    // Bootstrap    
+    wp_enqueue_style( 'dist-style-css', get_template_directory_uri() . '/dist/css/style.css', array(), '4.5.0' );
+    wp_enqueue_style( 'dist-app-css', get_template_directory_uri() . '/dist/css/app.css', array(), '4.5.0' );
     
-    wp_enqueue_style( 'main-style-scss', get_template_directory_uri() . '/dist/css/style.css', array(), '4.5.0' );
-    wp_enqueue_style( 'main-app-scss', get_template_directory_uri() . '/dist/css/app.css', array(), '4.5.0' );
-    
-    wp_enqueue_style( 'owl-css', get_template_directory_uri() . '/assets/plugin/', array(), '4.5.0' );
-    // Animated CSS
-    wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.7.2' );
-
     // Font Awesome
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/all.min.css', array(), '5.14.0' );
-
-    // Owl Carousel
-    wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/assets/plugins/slider/css/owl.carousel.min.css', array(), '2.3.4' );
-    wp_enqueue_style( 'owl-carousel-theme', get_template_directory_uri() . '/assets/plugins/slider/css/owl.theme.default.css', array(), '2.3.4' );
-    wp_enqueue_style( 'owl-carousel-theme-default', get_template_directory_uri() . '/assets/plugins/slider/css/owl.theme.css', array(), '2.3.4' );
-    wp_enqueue_style( 'testimonial-css', get_template_directory_uri() . '/assets/plugins/testimonial/css/owl.carousel.min.css', array(), '2.3.4' );
-    wp_enqueue_style( 'testimonial-theme-css', get_template_directory_uri() . '/assets/plugins/testimonial/css/owl.theme.min.css', array(), '2.3.4' );
     
-    wp_enqueue_style( 'grid-gallary', get_template_directory_uri() . '/assets/plugins/grid-gallary/css/grid-gallary.css', array(), '2.3.4' );
-    wp_enqueue_style( 'grid-gallary-min', get_template_directory_uri() . '/assets/plugins/grid-gallary/css/grid-gallary.min.css', array(), '2.3.4' );
     // Main Stylesheet
     wp_enqueue_style( 'main-style', get_stylesheet_uri(), array(), '1.0' );
 }
@@ -57,16 +41,18 @@ function my_theme_enqueue_scripts() {
     // Bootstrap
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery', 'popper'), '4.5.0', true );
     wp_enqueue_script( 'bootstrap-map', get_template_directory_uri() . '/assets/js/bootstrap.min.js.map', array('jquery', 'popper'), '4.5.0', true );
-
+    
     // Owl Carousel
     wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/plugins/slider/js/owl.carousel.min.js', array('jquery'), '2.3.4', true );
-
+    
     // Scroll Fixed
     wp_enqueue_script( 'scroll-fixed', get_template_directory_uri() . '/assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js', array('jquery'), '1.1.0', true );
     wp_enqueue_script( 'testimonial', get_template_directory_uri() . '/assets/plugins/testimonial/js/owl.carousel.min.js', array(), '1.1.0', true );
-
+    
     // Custom Script
     wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0', true );
+
+    wp_enqueue_style( 'main-scss', get_template_directory_uri() . '/build/index.js', array(), '4.5.0' );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );
 
@@ -86,5 +72,12 @@ function register_my_menu() {
 }
 add_action('after_setup_theme', 'register_my_menu');
 
+// Function to modify the excerpt length
+function custom_excerpt_length($length) {
+    return 20; // Change this number to the desired length
+}
+
+// Add filter to apply the custom excerpt length
+add_filter('excerpt_length', 'custom_excerpt_length');
 
 ?>

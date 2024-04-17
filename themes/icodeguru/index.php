@@ -10,24 +10,24 @@
         <div class="carousel-item active slider-item">
             <img class="d-block w-100 slider-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider-1.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h1 class="shadow strong slider-heading">Educate over 22,000 Pakistani Students</h1>
-                <p class="slider-p">Breaking Barriers and Bridging Gaps: Empowering 22,000+ Pakistani Students through Education</p>
-                <a href="#" class="btn btn-success hidden-xs">Fund a Student </a>
+                <h1 class=" strong slider-heading">From Screens to Success Stories: Your Journey Begins Here</h1>
+                <p class="slider-p">Embark on a digital journey towards impactful stories of success.</p>
+                <a href="#" class="btn btn-success hidden-xs">Want Know More </a>
             </div>
         </div>
         <div class="carousel-item slider-item">
             <img class="d-block w-100 slider-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider-2.jpg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-                <h1 class="shadow slider-heading">Only Eductaion is the solution</h1>
-                <p class="slider-p">In a world where uncertainty abounds, education emerges as the cornerstone of stability, the catalyst for innovation, and the foundation of resilience</p>
+                <h1 class=" slider-heading">Break Barriers, Build Dreams: Join the Movement</h1>
+                <p class="slider-p">Join a movement dedicated to breaking barriers and nurturing dreams.</p>
                 <a href="#" class="btn btn-success hidden-xs">Join our Slack</a>
             </div>
         </div>
         <div class="carousel-item slider-item">
             <img class="d-block w-100 slider-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider-3.jpg" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-                <h1 class="shadow slider-heading ">Help Pakistani Students with us</h1>
-                <p class="slider-p">Inspire Hope, Transform Lives: Join Us in Empowering Pakistani Students Through Education and Opportunity, One Donation at a Time</p>
+                <h1 class=" slider-heading ">From Every Corner, One Community: Join Us Today!</h1>
+                <p class="slider-p">Join hands with a diverse community united for a common cause.</p>
                 <a href="#" class="btn btn-success hidden-xs">Want to know more</a>
             </div>
         </div>
@@ -41,6 +41,9 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+
+
 
 <!-- ################# Slider Ends Here#######################--->
 
@@ -72,8 +75,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 natur-col text-center mx-auto">
-                    <h2>Do you want to help Pakistan</h2>
-                    <h4>Looking to see a student grow</h4>
+                    <h2> Donate and make a difference</h2>
+                    <h4>Empower students' dreams with your philanthropy</h4>
                     <button class="btn btn-light">Donate Now</button>
                 </div>
             </div>
@@ -85,7 +88,7 @@
 <div class="our-services container-fluid">
     <div class="container">
         <div class="row session-title">
-            <h2>What Are We Doing ?</h2>
+            <h2>Our Core Values</h2>
             <p>Teaching Students 100 Percent Free programming, under the guidance of Silicon Valley Engineers</p>
         </div>
         <div class="service-row row">
@@ -132,6 +135,46 @@
         </div>
     </div>
 </div>
+<!-- Updates -->
+<div class="container">
+<div class="row session-title">
+            <h2>Updates and Announcments</h2>
+        </div>
+<div class="card-columns d-flex justify-content-between align-items-center">
+    <?php $posts_query = new WP_Query(array(
+        'post_type' => 'post', // Change 'post' to your custom post type if needed
+        'posts_per_page' => 3, // Display a limited number of posts
+        'order' => 'DESC' // Display posts in reverse order
+    ));
+    if ($posts_query->have_posts()) {
+        // Loop through posts
+        while ($posts_query->have_posts()) {
+            $posts_query->the_post();
+            ?>
+            <div class="col-md-3">
+                <div class="card update-card" style="width: 20rem;">
+                    <img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top img-fluid" alt="<?php the_title_attribute(); ?>">
+                    <div class="card-body update-card-img" style="height:16rem;">
+                        <h5 class="card-title"><?php the_title(); ?></h5>
+                        <p class="card-text"><?php the_excerpt('10'); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-bottom-card">Read More</a>
+                    </div>
+                </div>
+    </div>
+    <?php
+            }
+
+          
+            
+            // Restore original post data
+            wp_reset_postdata();
+        } else {
+            // No posts found
+            echo '<p>No posts found.</p>';
+        }
+        ?>
+</div>
+</div>
 <!--  ************************* Testimonial  Starts Here ************************** -->
 
 <div class="our-services container-fluid">
@@ -140,12 +183,11 @@
             <h2>iCodeGuru Alumni</h2>
         </div>
         <div class="service-row row align-items-center justify-content-between">
-            <div class="col-md-3">
+        <div class="col-md-3">
                 <div class="service-col">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/talha.jpeg" alt="">
                     <div class="service-detail">
                         <h4>Muhammad Talha</h4>
-                        <p>PhD Candidate, USA</p>
                         <a class="fab fa-linkedin"></a>
                         <a href="https://www.linkedin.com/in/muhammadtalha01/" target="_blank" class="linkedin-link"> LinkedIn</a>
 
@@ -157,9 +199,7 @@
                 <div class="service-col">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/azib.jpeg" alt="">
                     <div class="service-detail">
-
                         <h4>Azib Farooq</h4>
-                        <p>MS Candidate, USA</p>
                         <a class="fab fa-linkedin"></a>
                         <a href="https://www.linkedin.com/in/itsazibfarooq/" target="_blank" class="linkedin-link"> LinkedIn</a>
                     </div>
@@ -172,7 +212,6 @@
                     <div class="service-detail">
 
                         <h4>Asif Rasool</h4>
-                        <p>Software Engineer, Germeny</p>
                         <a class="fab fa-linkedin"></a>
                         <a href="https://www.linkedin.com/in/asifrasool573/" target="_blank" class="linkedin-link"> LinkedIn</a>
                     </div>
@@ -181,70 +220,9 @@
         </div>
     </div>
 </div>
-<!-- Updates -->
 
-<section class="pt-5 pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <h3 class="mb-3">Updates and Announcements </h3>
-            </div>
-            <div class="col-6 text-right">
-                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                    <i class="fa fa-arrow-left"></i>
-                </a>
-                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                    <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="col-12">
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <?php $posts_query = new WP_Query(array(
-                                    'post_type' => 'post', // Change 'post' to your custom post type if needed
-                                    'posts_per_page' => 3 // Display a limited number of posts
-                                ));
 
-                                // Check if there are posts
-                                if ($posts_query->have_posts()) {
-                                    // Loop through posts
-                                    while ($posts_query->have_posts()) {
-                                        $posts_query->the_post();
-                                ?>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" style="height: 400px;width:auto;" alt="<?php the_title_attribute(); ?>" src="<?php the_post_thumbnail_url('medium'); ?>">
-                                                <div class="card-body">
-                                                    <h4 class="card-title"><?php the_title(); ?></h4>
-                                                    <p class="card-text"><?php the_excerpt(); ?></p>
-                                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <?php
-                                    }
-
-                                    // Restore original post data
-                                    wp_reset_postdata();
-                                } else {
-                                    // No posts found
-                                    echo '<p>No posts found.</p>';
-                                }
-                ?>
-                            </div>
-                        </div>
-               
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!--  ************************* Footer  Starts Here ************************** -->
 <div class="footer-ablove">
     <div class="container">

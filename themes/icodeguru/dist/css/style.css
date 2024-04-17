@@ -118,7 +118,7 @@ body {
 }
 
 .session-title {
-  padding: 30px;
+  padding: 00px;
   margin: 0px;
 }
 .session-title h2 {
@@ -166,7 +166,7 @@ body {
   float: right;
   margin-top: -38px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 .page-nav {
@@ -335,7 +335,12 @@ header .header-bottom img {
 }
 header .nav-col .navbar-nav {
   width: 100%;
-  padding: 10px;;
+  padding: 10px;
+  
+}
+header .nav-col:active{
+  /* border-bottom: 1px solid black; */
+
 }
 header .nav-col .navbar-nav li {
   padding: 7px 20px;
@@ -588,6 +593,11 @@ header .nav-col .navbar-nav .nav-btn {
   margin-bottom: 30px;
   height: 400px;
 }
+@media (max-width: 768px) {
+  .our-services .service-col {
+     margin-bottom: 20px;
+   height: 500px; }
+}
 .our-services .service-col-div-alumni {
   border: 1px solid rgba(204, 204, 204, 0.5803921569);
   margin-bottom: 30px;
@@ -617,7 +627,7 @@ header .nav-col .navbar-nav .nav-btn {
 .our-services .service-col .service-detail h4 {
   margin-top: 17px;
   margin-bottom: 15px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .our-services .service-col .service-detail p {
   font-size: 0.9rem;
